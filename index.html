@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Meta AI - Enhanced Landing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; }
+        .header { background-color: navy; color: white; padding: 20px; text-align: center; }
+        .section { margin: 20px; padding: 20px; border: 1px solid #ddd; }
+        .testimonials, .gallery, .faq, .team, .trust-badges { margin: 20px 0; }
+        .lazy-load { display: none; }
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Welcome to Sunrise Meta AI</h1></div>
+
+    <div class="section testimonials">
+        <h2>Testimonials</h2>
+        <p><strong>Student A:</strong> "This program improved my coding skills tremendously!"</p>
+        <p><strong>Student B:</strong> "I loved the hands-on projects and the supportive teachers!"</p>
+        <p><strong>Parent C:</strong> "My child is thriving in this learning environment!"</p>
+    </div>
+
+    <div class="section gallery">
+        <h2>Gallery</h2>
+        <img src="classroom_photo.jpg" alt="Classroom Activities" class="lazy-load" data-src="classroom_photo.jpg" />
+        <img src="activity_photo.jpg" alt="Activity Day" class="lazy-load" data-src="activity_photo.jpg" />
+    </div>
+
+    <div class="section faq">
+        <h2>FAQ</h2>
+        <div><strong>Q:</strong> What subjects are offered? <br /><strong>A:</strong> We offer Mathematics, Science, and Coding.</div>
+        <div><strong>Q:</strong> How do I enroll my child? <br /><strong>A:</strong> Enrollment is easy through our website.</div>
+    </div>
+
+    <div class="section team">
+        <h2>Meet Our Team</h2>
+        <p><strong>Mr. Smith:</strong> B.Sc. in Computer Science, 10 years of teaching experience.</p>
+        <p><strong>Ms. Johnson:</strong> M.Ed. in Curriculum Development, specialized in STEM education.</p>
+    </div>
+
+    <div class="section trust-badges">
+        <h2>Our Affiliation</h2>
+        <img src="cambridge_badge.png" alt="Cambridge Affiliation" />
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lazy loading images
+            const lazyImages = document.querySelectorAll('.lazy-load');
+            lazyImages.forEach(img => {
+                img.src = img.dataset.src;
+                img.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
