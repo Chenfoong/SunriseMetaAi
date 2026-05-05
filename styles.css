@@ -1,0 +1,118 @@
+:root {
+    --color-amber: #FFC107;
+    --color-navy: #001F3F;
+    --color-background: #F8F9FA;
+    --font-family-base: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
+    color: var(--color-navy);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-amber);
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-navy);
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-amber);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    text-align: center;
+}
+
+.section {
+    padding: 40px 20px;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    background-color: var(--color-amber);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--color-navy);
+    color: white;
+}
+
+.footer {
+    background-color: var(--color-navy);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
